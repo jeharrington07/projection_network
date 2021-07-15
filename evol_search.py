@@ -4,8 +4,11 @@ from ribs.archives import GridArchive
 from ribs.emitters import ImprovementEmitter
 from ribs.optimizers import Optimizer
 
+from random_network import create_random_dense, random_fake
 
 def fitness_func(x):
+    #dummy fitness function
+    #TODO: replace with rastrigin funciton
     fitness = 1
     b1 = 1
     b2 = 1

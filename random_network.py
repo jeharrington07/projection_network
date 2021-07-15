@@ -24,5 +24,5 @@ def create_random_dense(input_size, output_size, device):
     return RandomNet(device)
 
 
-def randomFake(output_size):
+def random_fake(output_size):
     return torch.randn(output_size)
