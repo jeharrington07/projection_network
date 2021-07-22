@@ -14,6 +14,7 @@ def fitness_func(solution, projector):
     fitness = 1
     b1 = 1
     b2 = 1
+    # What is the meaning of b1 and b2?  - Jeremiah
     return fitness, b1, b2
 
 #TODO: Put the below inside a main function, set up command line args
@@ -43,5 +44,8 @@ with torch.no_grad():
         results = [fitness_func(solution, projector) for solution in solutions]
         objectives = [result[0] for result in results]
         bcs = [result[1:] for result in results]
+        
+        # I'm generally following this, but don't have the details.  This is the process of evolving, yes?
+        # So bcs here is the weights of the network? - Jeremiah
 
         optimizer.tell(objectives, bcs)
